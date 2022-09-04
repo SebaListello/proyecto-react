@@ -1,10 +1,7 @@
-import './App.css';
-
-function App() {
+export default function App() {
   return (
-    <div className="App">
-    </div>
-  );
+    <h1 className="text-3xl font-bold underline bg-red-800">
+      Hello world!
+    </h1>
+  )
 }
-
-export default App;
