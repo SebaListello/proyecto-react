@@ -1,23 +1,30 @@
+import { useState } from 'react'
 import React from 'react'
 import ButtonLogin from './ButtonLogin'
 import ButtonSearch from './ButtonSearch'
 import ButtonShoppingCart from './ButtonShoppingCart'
+import MenuOptions from './MenuOptions'
 
 
 const NavBar = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const openClose = () => setIsOpen(!isOpen)
+  
   return ( 
   <>
     <nav className='flex flex-row w-full h-[10%] justify-between md:justify-end items-center'>
 
       {/* BOTON DE MENÚ MOVIL */}
       <button className='flex items-center justify-center h-full mx-3 md:hidden'>
-        <div>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#F96D00" className="absolute w-6 h-6 active:animate-ping">
+        <div onClick={openClose}>
+          {isOpen? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#F96D00" className="w-6 h-6 active:animate-ping">
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
+          </svg> 
+          : 
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#F96D00" className="w-6 h-6 active:animate-ping">
             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
+          </svg>}
+          
         </div>
       </button>
 
@@ -80,15 +87,7 @@ const NavBar = () => {
       </div>
 
       {/* MENU MOVIL-DESKTOP */}
-      <div className='absolute md:hidden w-full bg-orange-500 top-[10%] flex justify-center items-center py-[3%]'>
-        <ul className='flex flex-col leading-8 text-[0.9rem] font-inter font-normal text-white tracking-widest items-center'>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Hombres</a></li>
-          <li><a href="#">Mujeres</a></li>
-          <li><a href="#">Marcas</a></li>
-          <li><a href="#">Contactos</a></li>
-        </ul>
-      </div>
+      {isOpen && (<MenuOptions/>)}
     </nav>
 
   </>
