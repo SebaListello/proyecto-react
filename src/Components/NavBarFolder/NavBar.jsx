@@ -3,7 +3,7 @@ import React from 'react'
 import ButtonLogin from './ButtonLogin'
 import ButtonSearch from './ButtonSearch'
 import ButtonShoppingCart from './ButtonShoppingCart'
-import MenuOptions from './MenuOptions'
+import MenuMobileOptions from './MenuMobileOptions'
 import SvgCruz from './SvgCruz'
 import SvgMenu from './SvgMenu'
 import LogoSportwear from './LogoSportwear'
@@ -17,9 +17,9 @@ const NavBar = () => {
     <nav className='flex flex-row w-full h-[10%] justify-between md:justify-end items-center'>
 
       {/* BOTON DE MENÚ MOVIL */}
-      <button className='flex items-center justify-center h-full mx-3 md:hidden'>
+      <button className='flex items-center justify-center mx-3 md:hidden'>
         <div onClick={openClose}>
-          {isOpen ? 
+          {isOpen ?
           <SvgCruz/>
           :
           <SvgMenu/> } 
@@ -38,14 +38,11 @@ const NavBar = () => {
         <ButtonLogin />
       </div>
 
-      {/* MENU MOVIL-DESKTOP */}
-      {isOpen && (<MenuOptions/>)}
+      {/* MENU MOVIL */}
+      {isOpen && (<MenuMobileOptions/>)}
+
     </nav>
-
   </>
-
-// LISTA OPCIONES DESKTOP
-// LISTA OPCIONES MOVIL
   )
 }
 
