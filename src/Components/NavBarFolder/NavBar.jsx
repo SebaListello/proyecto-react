@@ -20,7 +20,7 @@ const NavBar = () => {
       <nav className="flex flex-row w-full h-[10%] justify-between md:justify-end items-center">
         {/* BOTON DE MENÚ MOVIL */}
         <button className="flex items-center justify-center mx-3 md:hidden">
-          <div onClick={openClose}>{isOpen ? <SvgCruz /> : <SvgMenu />}</div>
+          <div onClick={openClose}>{isOpen ? <SvgCruz/> : <SvgMenu/>}</div>
         </button>
 
         {/* LOGO */}
@@ -37,6 +37,7 @@ const NavBar = () => {
 
         {/* MENU MOVIL */}
         <MenuMobileOptions openClose={openClose} transition={isOpen? 'translate-x-0' : 'translate-x-full'}/>
+        
         {/* MENU DESKTOP */}
         <div className="absolute hidden md:flex justify-center items-center text-[.8rem] font-inter font-normal bg-black text-white h-[5%] top-[10%] w-full">
           <button className={`${styleButtons}`} href="#">Inicio</button>
