@@ -4,9 +4,9 @@ import ButtonLogin from './ButtonLogin'
 import ButtonSearch from './ButtonSearch'
 import ButtonShoppingCart from './ButtonShoppingCart'
 import MenuMobileOptions from './MenuMobileOptions'
-import SvgCruz from './SvgCruz'
-import SvgMenu from './SvgMenu'
-import LogoSportwear from './LogoSportwear'
+import SvgCruz from './Svg/SvgCruz'
+import SvgMenu from './Svg/SvgMenu'
+import LogoSportwear from './Svg/LogoSportwear'
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -36,10 +36,10 @@ const NavBar = () => {
         </div>
 
         {/* MENU MOVIL */}
-        <MenuMobileOptions openClose={openClose} transition={isOpen? 'translate-x-0' : 'translate-x-full'}/>
+        <MenuMobileOptions transition={isOpen? 'translate-x-0' : 'translate-x-full'}/>
         
         {/* MENU DESKTOP */}
-        <div className="absolute hidden md:flex justify-center items-center text-[.8rem] font-inter font-normal bg-black text-white h-[5%] top-[10%] w-full">
+        <div className="absolute hidden md:flex justify-center items-center text-[.8rem] font-inter font-normal bg-gradient-to-b from-gray-700 via-gray-900 to-black text-white h-[5%] top-[10%] w-full">
           <button className={`${styleButtons}`} href="#">Inicio</button>
           <button className={`${styleButtons}`} href="#">Hombres</button>
           <button className={`${styleButtons}`} href="#">Mujeres</button>
