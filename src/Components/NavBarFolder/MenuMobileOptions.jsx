@@ -11,7 +11,7 @@ const MenuMobileOptions = ({ transition }) => {
 
   return (
     <div
-      className={`md:hidden absolute fixed w-full bg-gradient-to-b from-orange-400 to-orange-700 top-[10%] transform transition duration-200 flex justify-center items-center py-[3%] ${transition}`}
+      className={`md:hidden absolute w-full bg-gradient-to-b from-orange-400 to-orange-700 top-[10%] transform transition duration-200 flex justify-center items-center py-[3%] ${transition}`}
     >
       <ul className="flex flex-col leading-8 text-[0.9rem] font-inter font-normal w-full text-white items-center">
         <li>
