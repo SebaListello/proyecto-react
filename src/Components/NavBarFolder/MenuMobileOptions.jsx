@@ -1,58 +1,72 @@
 import React from "react";
 import { useState } from "react";
+import { Indumentaria, Marcas } from "./Data/DataProducts";
 import SvgClose from "./Svg/SvgClose";
-import Marcas from "./Marcas";
 
-const MenuMobileOptions = ({ transition }) => {
+const MenuMobileOptions = ({ nameButton, transition, openClose }) => {
 
-  const [listMen, setListMen] = useState(false);
-  const [listWomen, setListWomen] = useState(false);
-  const [listBrands, setListBrands] = useState(false);
+  /*    ESTADOS   */
+  const [click, setClick] =
+    useState({
+      men: false,
+      women: false,
+      brands: false,
+    });
+
+  /*    ESTILOS   */
+  const styleMenuOptionsList = 'flex flex-col items-center justify-center';
+  const styleSubMenuOptionsList = 'flex flex-col border-y rounded-lg uppercase border-white text-gray-200 font text-[0.7rem] leading-7 py-2';
+
 
   return (
     <div
-      className={`md:hidden absolute w-full bg-gradient-to-b from-orange-400 to-orange-700 top-[10%] transform transition duration-200 flex justify-center items-center py-[3%] ${transition}`}
-    >
-      <ul className="flex flex-col leading-8 text-[0.9rem] font-inter font-normal w-full text-white items-center">
+      className={`md:hidden shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] absolute w-full bg-gradient-to-b from-orange-400 to-orange-700 top-[10%] transform transition duration-200 flex justify-center items-center py-[3%] ${transition}`}>
+
+      <ul className="flex flex-col leading-10 text-[1rem] font-inter font-normal text-white items-center">
+
         <li>
-          <a href="#">Inicio</a>
+          <a onClick={openClose} href="#">{nameButton.button1}</a>
         </li>
 
         <li>
-          <button onClick={() => setListMen(!listMen)}>
-            Hombres
-            {listMen && (
-              <div  onClick={() => setListMen(!listMen)} className="flex flex-col text-[0.7rem] leading-5">
-                
-              </div>
-            )}
+          <button className={`${styleMenuOptionsList}`} onClick={() => setClick({ men: !click.men })}>
+
+            {click.men ? <SvgClose /> : nameButton.button2}
+            {click.men && (
+              <div className={`${styleSubMenuOptionsList}`}>
+                {Indumentaria.map((item) => <a href="#">{item}</a>)}
+              </div>)}
           </button>
         </li>
 
         <li>
-          <button onClick={() => setListWomen(!listWomen)}>
-            Mujeres
-            {listWomen && 
-              <div>
-                aaaa
-              </div>}
+          <button className={`${styleMenuOptionsList}`} onClick={() => setClick({ women: !click.women })}>
+
+            {click.women ? <SvgClose /> : nameButton.button3}
+
+            {click.women && (
+              <div className={`${styleSubMenuOptionsList}`}>
+                {Indumentaria.map((item) => <a href="#">{item}</a>)}
+              </div>)}
           </button>
         </li>
 
         <li>
-          <button className="flex flex-col items-center justify-center" onClick={() => setListBrands(!listBrands)}>
-            {listBrands? <SvgClose/> : 'Marcas'}
-            {listBrands && (
-              <div className="flex flex-col text-[0.7rem] leading-5">
-                {Marcas.map( item => <li>{item}</li>)}
-              </div>
-            )}
+          <button className={`${styleMenuOptionsList}`} onClick={() => setClick({ brands: !click.brands })}>
+
+            {click.brands ? <SvgClose /> : nameButton.button4}
+
+            {click.brands && (
+              <div className={`${styleSubMenuOptionsList}`}>
+                {Marcas.map((item) => <a href="#">{item}</a>)}
+              </div>)}
           </button>
         </li>
 
         <li>
-          <a href="#">Contactos</a>
+          <a onClick={openClose} href="#">{nameButton.button5}</a>
         </li>
+
       </ul>
     </div>
   );
