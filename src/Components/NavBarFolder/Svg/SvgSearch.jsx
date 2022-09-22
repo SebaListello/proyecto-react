@@ -8,7 +8,7 @@ const SvgSearch = () => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="#F96D00"
-      className="w-7 h-7 shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px]"
+      className="w-7 h-7 "
     >
       <path
         strokeLinecap="round"

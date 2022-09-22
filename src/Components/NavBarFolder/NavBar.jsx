@@ -45,7 +45,12 @@ const NavBar = () => {
         <MenuMobileOptions
           nameButton={nameButtons}
           openClose={openClose}
-          transition={isOpen ? "translate-x-0" : "translate-x-full"}
+          transitionMenuGral={
+            isOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
+          }
+          transitionMenuButton={
+            isOpen ? "translate-x-0 opacity-100" : "translate-x-48 opacity-0"
+          }
         />
 
         {/* MENU DESKTOP */}

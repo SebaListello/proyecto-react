@@ -3,70 +3,91 @@ import { useState } from "react";
 import { Indumentaria, Marcas } from "./Data/DataProducts";
 import SvgClose from "./Svg/SvgClose";
 
-const MenuMobileOptions = ({ nameButton, transition, openClose }) => {
-
+const MenuMobileOptions = ({
+  nameButton,
+  transitionMenuGral,
+  transitionMenuButton,
+  openClose,
+}) => {
   /*    ESTADOS   */
-  const [click, setClick] =
-    useState({
-      men: false,
-      women: false,
-      brands: false,
-    });
+  const [click, setClick] = useState({
+    men: false,
+    women: false,
+    brands: false,
+  });
 
   /*    ESTILOS   */
-  const styleMenuOptionsList = 'flex flex-col items-center justify-center';
-  const styleSubMenuOptionsList = 'flex flex-col border-y rounded-lg uppercase border-white text-gray-200 font text-[0.7rem] leading-7 py-2';
-
+  const menuOptionsList = `p-1 m-1 flex flex-col items-center justify-center ${transitionMenuButton} transform transition delay-300 duration-300 `;
+  const subMenuOptionsList = 'flex flex-col border-y rounded-lg uppercase border-white text-gray-200 font text-[0.7rem] leading-7 py-2 opacity-100 transform transition duration-300';
+  const transitionSubMenu = 'h-0 w-0 opacity-0 transform duration-300 translate-x-full scale-0';
 
   return (
     <div
-      className={`md:hidden shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] absolute w-full bg-gradient-to-b from-orange-400 to-orange-700 top-[10%] transform transition duration-200 flex justify-center items-center py-[3%] ${transition}`}>
-
+      className={`md:hidden shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] absolute w-full bg-gradient-to-b from-orange-400 to-orange-700 top-[10%] transform transition duration-300 flex justify-center items-center py-[3%] ${transitionMenuGral}`}
+    >
       <ul className="flex flex-col leading-10 text-[1rem] font-inter font-normal text-white items-center">
-
         <li>
-          <a onClick={openClose} href="#">{nameButton.button1}</a>
+          <a className={`${menuOptionsList}`} onClick={openClose} href="#">
+            {nameButton.button1}
+          </a>
         </li>
 
         <li>
-          <button className={`${styleMenuOptionsList}`} onClick={() => setClick({ men: !click.men })}>
-
+          <button
+            className={`${menuOptionsList}`}
+            onClick={() => setClick({ men: !click.men })}
+          >
             {click.men ? <SvgClose /> : nameButton.button2}
-            {click.men && (
-              <div className={`${styleSubMenuOptionsList}`}>
-                {Indumentaria.map((item) => <a href="#">{item}</a>)}
-              </div>)}
+
+            <div
+              className={click.men? subMenuOptionsList : transitionSubMenu}
+            >
+              {Indumentaria.map((item) => (
+                <a className={!click.men && 'opacity-0'} href="#">{item}</a>
+              ))}
+            </div>
           </button>
         </li>
 
         <li>
-          <button className={`${styleMenuOptionsList}`} onClick={() => setClick({ women: !click.women })}>
-
+          <button
+            className={`${menuOptionsList}`}
+            onClick={() => setClick({ women: !click.women })}
+          >
             {click.women ? <SvgClose /> : nameButton.button3}
 
-            {click.women && (
-              <div className={`${styleSubMenuOptionsList}`}>
-                {Indumentaria.map((item) => <a href="#">{item}</a>)}
-              </div>)}
+            <div
+              className={click.women? subMenuOptionsList : transitionSubMenu}
+            >
+              {Indumentaria.map((item) => (
+                <a className={!click.women && 'opacity-0'} href="#">{item}</a>
+              ))}
+            </div>
           </button>
         </li>
 
         <li>
-          <button className={`${styleMenuOptionsList}`} onClick={() => setClick({ brands: !click.brands })}>
-
+          <button
+            className={`${menuOptionsList}`}
+            onClick={() => setClick({ brands: !click.brands })}
+          >
             {click.brands ? <SvgClose /> : nameButton.button4}
 
-            {click.brands && (
-              <div className={`${styleSubMenuOptionsList}`}>
-                {Marcas.map((item) => <a href="#">{item}</a>)}
-              </div>)}
+            <div
+              className={click.brands? subMenuOptionsList : transitionSubMenu}
+            >
+              {Marcas.map((item) => (
+                <a className={!click.brands && 'opacity-0'} href="#">{item}</a>
+              ))}
+            </div>
           </button>
         </li>
 
         <li>
-          <a onClick={openClose} href="#">{nameButton.button5}</a>
+          <a className={`${menuOptionsList}`} onClick={openClose} href="#">
+            {nameButton.button5}
+          </a>
         </li>
-
       </ul>
     </div>
   );
