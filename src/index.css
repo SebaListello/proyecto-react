@@ -3,13 +3,37 @@
 @tailwind components;
 @tailwind utilities;
 
-::root{
+:root{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    /* COLORES */
+    --clr-primary: #FD8526;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 body{
     font-family: 'Roboto', sans-serif;
+}
+
+img {
+display: block;
+height: auto;
+max-width: 100%;
+}
+
+ul {
+list-style-type: none;
+}
+
+a {
+text-decoration: none;
+}
+
+li button{
+    text-transform: uppercase;
 }

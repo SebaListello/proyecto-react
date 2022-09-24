@@ -195,7 +195,7 @@ export const App = () => {
       <NavBar></NavBar>
 
       {/* Aca va la parte de pablo, es solo un separador esto  */}
-      <section className="w-full h-[auto] border border-red-500">
+      <section className="w-full h-[auto]">
         <img src={messirve} alt="messi" />
       </section>
 

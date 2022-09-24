@@ -15,7 +15,7 @@ const NavBar = () => {
       <nav className="flex flex-row w-full h-[10%] justify-between md:justify-end items-center">
         {/* BOTON DE MENÚ MOVIL */}
         <button className="flex items-center justify-center mx-3 md:hidden">
-          <div onClick={openClose}>{isOpen ? <MdClose size={24} color={"orange"}/> : <MdMenu size={24} color={"orange"}/>}</div>
+          <div onClick={openClose}>{isOpen ? <MdClose size={24} color={"orange"}/> : <MdMenu size={24} color={"var(--clr-primary)"}/>}</div>
         </button>
 
         {/* LOGO */}
@@ -25,16 +25,16 @@ const NavBar = () => {
 
         {/* BOTON DE CARRITO, USER, SEARCH */}
         <div className="flex items-center justify-center h-full md:h-[10%] mx-3 md:absolute flex-rows">
-          <MdOutlineSearch size={28} color={"orange"}/>
-          <MdOutlineShoppingCart size={24} color={"orange"}/>
-          <MdLogin size={24} color={"orange"}/>
+          <MdOutlineSearch size={28} color={"var(--clr-primary)"}/>
+          <MdOutlineShoppingCart size={24} color={"var(--clr-primary)"}/>
+          <MdLogin size={24} color={"var(--clr-primary)"}/>
         </div>
 
         {/* MENU MOVIL */}
         <MenuMobileOptions transition={isOpen? 'translate-x-0' : 'translate-x-full'}/>
         
         {/* MENU DESKTOP */}
-        <div className="absolute hidden md:flex justify-center items-center text-[.8rem] font-inter font-normal bg-gradient-to-b from-gray-700 via-gray-900 to-black  py-6 text-white h-[5%] top-[10%] w-full">
+        <div className="absolute hidden md:flex justify-center items-center text-[.8rem] bg-gradient-to-b from-gray-800 via-gray-900 to-black  py-6 text-white h-[5%] top-[10%] w-full">
           <button className={`${styleButtons}`} href="#">Inicio</button>
           <button className={`${styleButtons}`} href="#">Hombres</button>
           <button className={`${styleButtons}`} href="#">Mujeres</button>
