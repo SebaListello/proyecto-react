@@ -8,7 +8,7 @@ const NavBar = () => {
   const openClose = () => setIsOpen(!isOpen)
 
   //>>>>>>>>>>ESTILOS BOTONES MENU DESKTOP<<<<<<<<<<<
-  const styleButtons = 'hover:text-[.85rem] rounded-lg p-1 hover:text-orange-300 grad mx-2 duration-100 ease-in-out'
+  const styleButtons = 'hover:text-[.85rem] rounded-lg p-1 hover:text-orange-300 grad mx-2 duration-100 ease-in-out uppercase '
 
   return (
     <>
@@ -34,7 +34,7 @@ const NavBar = () => {
         <MenuMobileOptions transition={isOpen? 'translate-x-0' : 'translate-x-full'}/>
         
         {/* MENU DESKTOP */}
-        <div className="absolute hidden md:flex justify-center items-center text-[.8rem] font-inter font-normal bg-gradient-to-b from-gray-700 via-gray-900 to-black text-white h-[5%] top-[10%] w-full">
+        <div className="absolute hidden md:flex justify-center items-center text-[.8rem] font-inter font-normal bg-gradient-to-b from-gray-700 via-gray-900 to-black  py-6 text-white h-[5%] top-[10%] w-full">
           <button className={`${styleButtons}`} href="#">Inicio</button>
           <button className={`${styleButtons}`} href="#">Hombres</button>
           <button className={`${styleButtons}`} href="#">Mujeres</button>

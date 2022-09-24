@@ -1,7 +1,7 @@
 import NavBar from "./Components/NavBarFolder/NavBar";
 import { ProductsSlider } from './Components/produtcsSlider/ProductsSlider'
 import {  buzo01h, buzo02h, zapatilla01h, zapatilla02h, zapatilla03h, zapatilla04h, reloj01h, pantalon01h, ad01h, ad02h, buzo01m, buzo02m, buzo03m, zapatilla01m, zapatilla02m, calza01m, conjunto01m, bolso01m, ad01m, ad02m, adidas, nike, puma, fila, lecoq } from './assets/index.js';
-
+import messirve  from './assets/imagen_1.svg'
 const productosHombre = [
   {
       id: 1,
@@ -195,10 +195,12 @@ export const App = () => {
       <NavBar></NavBar>
 
       {/* Aca va la parte de pablo, es solo un separador esto  */}
-      <section className="w-full h-[60vh] border border-red-500"></section>
+      <section className="w-full h-[auto] border border-red-500">
+        <img src={messirve} alt="messi" />
+      </section>
 
       {/* Parte de Julian */}
-      <div className="productsSlider__container container mx-auto">
+      <div className="productsSlider__container container mx-auto px-5 md:px-0">
         <div className="my-[50px] grid grid-cols-1 md:grid-cols-[20%_80%] items-center">
           <div className="product__slider-ad justify-self-center mb-4 lg:mb-0 md:mr-auto">
               <img className=" max-h-[160px] object-cover max-w-full  md:hidden" src={ad01h} alt="ad" />
