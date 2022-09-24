@@ -2,7 +2,6 @@ import NavBar from "./Components/NavBarFolder/NavBar";
 import { ProductsSlider } from './Components/produtcsSlider/ProductsSlider'
 import {  buzo01h, buzo02h, zapatilla01h, zapatilla02h, zapatilla03h, zapatilla04h, reloj01h, pantalon01h, ad01h, ad02h, buzo01m, buzo02m, buzo03m, zapatilla01m, zapatilla02m, calza01m, conjunto01m, bolso01m, ad01m, ad02m, adidas, nike, puma, fila, lecoq } from './assets/index.js';
 
-
 const productosHombre = [
   {
       id: 1,
@@ -169,6 +168,24 @@ const productosMujer = [
     nombre: "Zapatillas Fila Sandenal Wedge De Mujer",
     descripcion: "3 cuotas de $ 7.916,33 sin interés",
 },
+{
+  id: 9,
+  imagen: bolso01m,
+  marca: "Adidas",
+  icono: adidas,
+  precio: "$19.999",
+  nombre: "Bolso adidas Shopper Metalizado De Mujer 19 Litros",
+  descripcion: "3 cuotas de $ 6.416,33 sin interés",
+},
+{
+  id: 10,
+  imagen: pantalon01h,
+  marca: "Adidas",
+  icono: adidas,
+  precio: "$27.999",
+  nombre: "Campera adidas Floral De Mujer",
+  descripcion: "3 cuotas de $ 9.666,33 sin interés",
+},
 ];
 
 export const App = () => {
@@ -181,14 +198,25 @@ export const App = () => {
       <section className="w-full h-[60vh] border border-red-500"></section>
 
       {/* Parte de Julian */}
-      <div className="products__container container mx-auto my-8 grid grid-cols-1 md:grid-cols-[20%_80%] items-center">
-        <div className="product__slider-ad mr-1 justify-self-center mb-4 lg:mb-0">
-                      <img className=" max-h-[160px] object-cover max-w-full  md:hidden" src={ad01h} alt="ad" />
-                      <img className="max-h-[360px] object-cover max-w-full hidden md:block" src={ad02h} alt="ad" />
+      <div className="productsSlider__container container mx-auto">
+        <div className="my-[50px] grid grid-cols-1 md:grid-cols-[20%_80%] items-center">
+          <div className="product__slider-ad justify-self-center mb-4 lg:mb-0 md:mr-auto">
+              <img className=" max-h-[160px] object-cover max-w-full  md:hidden" src={ad01h} alt="ad" />
+              <img className="max-h-[360px] object-cover max-w-full hidden md:block" src={ad02h} alt="ad" />
+          </div>
+          <ProductsSlider 
+            products = {productosHombre} 
+          />
         </div>
-        <ProductsSlider 
-          products = {productosHombre} 
-        />
+        <div className="grid grid-cols-1 md:grid-cols-[80%_20%] items-center">
+          <ProductsSlider 
+            products = {productosMujer} 
+          />
+          <div className="product__slider-ad justify-self-center mb-4 lg:mb-0 md:ml-auto">
+              <img className=" max-h-[160px] object-cover max-w-full  md:hidden" src={ad01m} alt="ad" />
+              <img className="max-h-[360px] object-cover max-w-full hidden md:block" src={ad02m} alt="ad" />
+          </div>
+        </div>
       </div>
     </div>
   )
