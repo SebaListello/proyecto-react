@@ -208,11 +208,11 @@ export const App = () => {
             products = {productosHombre} 
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-[80%_20%] items-center">
+        <div className="grid grid-cols-1 md:grid-cols-[80%_20%] items-center grid-col-reverse">
           <ProductsSlider 
             products = {productosMujer} 
           />
-          <div className="product__slider-ad justify-self-center mb-4 lg:mb-0 md:ml-auto">
+          <div className="product__slider-ad justify-self-center mb-4 lg:mb-0 md:ml-auto order-first md:order-none">
               <img className=" max-h-[160px] object-cover max-w-full  md:hidden" src={ad01m} alt="ad" />
               <img className="max-h-[360px] object-cover max-w-full hidden md:block" src={ad02m} alt="ad" />
           </div>
