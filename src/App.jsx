@@ -218,6 +218,8 @@ export const App = () => {
           </div>
         </div>
       </div>
+      {/* Parte de Julian */}
+
     </div>
   )
 }
