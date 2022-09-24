@@ -1,17 +1,12 @@
 import { useState } from 'react'
-import React from 'react'
-import ButtonLogin from './ButtonLogin'
-import ButtonSearch from './ButtonSearch'
-import ButtonShoppingCart from './ButtonShoppingCart'
+import { MdMenu, MdClose, MdOutlineShoppingCart, MdOutlineSearch, MdLogin} from 'react-icons/md'
 import MenuMobileOptions from './MenuMobileOptions'
-import SvgCruz from './Svg/SvgCruz'
-import SvgMenu from './Svg/SvgMenu'
-import LogoSportwear from './Svg/LogoSportwear'
+import logoSportwear from '../../assets/LogoSportwear.svg'
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const openClose = () => setIsOpen(!isOpen)
-  
+
   //>>>>>>>>>>ESTILOS BOTONES MENU DESKTOP<<<<<<<<<<<
   const styleButtons = 'hover:text-[.85rem] rounded-lg p-1 hover:text-orange-300 grad mx-2 duration-100 ease-in-out'
 
@@ -20,19 +15,19 @@ const NavBar = () => {
       <nav className="flex flex-row w-full h-[10%] justify-between md:justify-end items-center">
         {/* BOTON DE MENÚ MOVIL */}
         <button className="flex items-center justify-center mx-3 md:hidden">
-          <div onClick={openClose}>{isOpen ? <SvgCruz/> : <SvgMenu/>}</div>
+          <div onClick={openClose}>{isOpen ? <MdClose size={24} color={"orange"}/> : <MdMenu size={24} color={"orange"}/>}</div>
         </button>
 
         {/* LOGO */}
         <div className="flex flex-row items-center justify-center h-full md:w-full">
-          <LogoSportwear />
+          <img src={logoSportwear} alt="Sportswear" />
         </div>
 
         {/* BOTON DE CARRITO, USER, SEARCH */}
-        <div className="flex justify-center h-full md:h-[10%] mx-3 md:absolute flex-rows">
-          <ButtonSearch />
-          <ButtonShoppingCart />
-          <ButtonLogin />
+        <div className="flex items-center justify-center h-full md:h-[10%] mx-3 md:absolute flex-rows">
+          <MdOutlineSearch size={28} color={"orange"}/>
+          <MdOutlineShoppingCart size={24} color={"orange"}/>
+          <MdLogin size={24} color={"orange"}/>
         </div>
 
         {/* MENU MOVIL */}

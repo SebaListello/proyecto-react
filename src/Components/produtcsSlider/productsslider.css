@@ -1,0 +1,33 @@
+/* Arrows styles */
+.slick-prev::before, .slick-next::before{
+    font-size: 25px;
+    color: black;
+}
+.slick-prev{
+    width: 50px;
+    z-index: 100;
+}
+
+.slick-next{
+    width: 45px;
+    z-index: 100;
+}
+
+/* Dots Styles*/
+.slick-dots li button:before {
+    font-size:10px;
+    color: gray;   
+}
+
+.slick-dots li.slick-active button:before {
+    color: orange; 
+}
+
+.slick-slide div{
+ padding: 5px;
+}
+ 
+
+.slick-prev{
+    color: red;
+}

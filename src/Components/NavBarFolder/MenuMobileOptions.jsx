@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import SvgClose from "./Svg/SvgClose";
+import { MdClose } from 'react-icons/md'
+
 import Marcas from "./Marcas";
 
 const MenuMobileOptions = ({ transition }) => {
@@ -41,7 +42,7 @@ const MenuMobileOptions = ({ transition }) => {
 
         <li>
           <button className="flex flex-col items-center justify-center" onClick={() => setListBrands(!listBrands)}>
-            {listBrands? <SvgClose/> : 'Marcas'}
+            {listBrands? <MdClose size={24} color={"orange"}/> : 'Marcas'}
             {listBrands && (
               <div className="flex flex-col text-[0.7rem] leading-5">
                 {Marcas.map( item => <li>{item}</li>)}
