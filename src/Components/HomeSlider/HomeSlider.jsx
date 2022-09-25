@@ -31,7 +31,7 @@ export const HomeSlider = () => {
           </div>
         ))}
       </Slider>
-      );
+      
     </div>
   );
 };
