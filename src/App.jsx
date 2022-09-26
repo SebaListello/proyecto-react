@@ -223,7 +223,7 @@ export const App = () => {
       <NavBar></NavBar>
 
       {/* Aca va la parte de pablo, es solo un separador esto  */}
-      <section className="w-full h-[60vh] border border-red-500">
+      <section className="w-full h-[60vh] ">
         <HomeSlider></HomeSlider>
       </section>
 
