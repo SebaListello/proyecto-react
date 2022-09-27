@@ -1,9 +1,9 @@
 import NavBar from "./Components/NavBarFolder/NavBar";
-import SliderMarcas from "./Components/marcasSlider/SliderMarcas"
+import SliderMarcas from "./Components/MarcasSlider/SliderMarcas"
 import { ProductsSlider } from "./Components/produtcsSlider/ProductsSlider";
-import { HomeSlider } from "./Components/homeSlider/HomeSlider";
+import { HomeSlider } from "./Components/HomeSlider/HomeSlider";
 import { MoreBrands } from "./Components/moreBrands/MoreBrands";
-import {buzo01h,buzo02h,zapatilla01h,zapatilla02h,zapatilla03h,zapatilla04h,reloj01h,pantalon01h,ad01h,ad02h,buzo01m,buzo02m,buzo03m,zapatilla01m,zapatilla02m,calza01m,conjunto01m,bolso01m,ad01m,ad02m, adidas, nike, puma, fila, lecoq} from "./assets/index.js";
+import {buzo01h,buzo02h,zapatilla01h,zapatilla02h,zapatilla03h,zapatilla04h,reloj01h,pantalon01h,ad01h,ad02h,buzo01m,buzo02m,buzo03m,zapatilla01m,zapatilla02m,calza01m,bolso01m,ad01m,ad02m, adidas, nike, puma, fila, lecoq} from "./assets/index.js";
 
 const productosHombre = [
   {
