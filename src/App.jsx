@@ -201,7 +201,7 @@ export const App = () => {
       {/* Parte de seba */}
 
       {/* Parte de pablo */}
-      <section className="homeslider mt-[70px] md:mt-[105px] w-full">
+      <section className="homeslider mt-[90px] md:mt-[120px] w-full">
         <HomeSlider/>
       </section>
       {/* Parte de pablo */}
