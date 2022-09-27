@@ -42,8 +42,8 @@ const MenuMobileOptions = ({
             <div
               className={click.men? subMenuOptionsList : transitionSubMenu}
             >
-              {Indumentaria.map((item) => (
-                <a className={!click.men && 'opacity-0'} href="#">{item}</a>
+              {Indumentaria.map((item, i) => (
+                <a key={i} className={!click.men && 'opacity-0'} href="#">{item}</a>
               ))}
             </div>
           </button>
@@ -59,8 +59,8 @@ const MenuMobileOptions = ({
             <div
               className={click.women? subMenuOptionsList : transitionSubMenu}
             >
-              {Indumentaria.map((item) => (
-                <a className={!click.women && 'opacity-0'} href="#">{item}</a>
+              {Indumentaria.map((item, i) => (
+                <a key={i} className={!click.women && 'opacity-0'} href="#">{item}</a>
               ))}
             </div>
           </button>
@@ -76,8 +76,8 @@ const MenuMobileOptions = ({
             <div
               className={click.brands? subMenuOptionsList : transitionSubMenu}
             >
-              {Marcas.map((item) => (
-                <a className={!click.brands && 'opacity-0'} href="#">{item}</a>
+              {Marcas.map((item, i) => (
+                <a key={i} className={!click.brands && 'opacity-0'} href="#">{item}</a>
               ))}
             </div>
           </button>

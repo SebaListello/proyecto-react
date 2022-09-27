@@ -37,3 +37,8 @@ text-decoration: none;
 li button{
     text-transform: uppercase;
 }
+
+/* HomeSlider dots styles */
+.homeslider.slick-dots{
+    margin-top: 500px;
+}

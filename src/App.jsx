@@ -1,7 +1,7 @@
 import NavBar from "./Components/NavBarFolder/NavBar";
-import SliderMarcas from "./Components/MarcasSlider/SliderMarcas"
+import SliderMarcas from "./Components/marcasSlider/SliderMarcas"
 import { ProductsSlider } from "./Components/produtcsSlider/ProductsSlider";
-import { HomeSlider } from "./Components/HomeSlider/HomeSlider";
+import { HomeSlider } from "./Components/homeSlider/HomeSlider";
 import { MoreBrands } from "./Components/moreBrands/MoreBrands";
 import {buzo01h,buzo02h,zapatilla01h,zapatilla02h,zapatilla03h,zapatilla04h,reloj01h,pantalon01h,ad01h,ad02h,buzo01m,buzo02m,buzo03m,zapatilla01m,zapatilla02m,calza01m,conjunto01m,bolso01m,ad01m,ad02m, adidas, nike, puma, fila, lecoq} from "./assets/index.js";
 
@@ -195,12 +195,12 @@ export const App = () => {
   return (
     <div className="h-screen overflow-x-hidden">
       {/* Parte de seba */}
-      <NavBar></NavBar>
+      <NavBar/>
       {/* Parte de seba */}
 
       {/* Parte de pablo */}
-      <section className="mt-[20%] md:mt-[18%] lg:mt-[11%] xl:mt-[7%] 2xl:mt-[6%] w-full">
-        <HomeSlider></HomeSlider>
+      <section className="homeslider mt-[20%] md:mt-[18%] lg:mt-[11%] xl:mt-[7%] 2xl:mt-[6%] w-full">
+        <HomeSlider/>
       </section>
       {/* Parte de pablo */}
 

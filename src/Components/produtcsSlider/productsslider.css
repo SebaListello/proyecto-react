@@ -5,12 +5,12 @@
 }
 .slick-prev{
     width: 50px;
-    z-index: 100;
+    z-index: 40;
 }
 
 .slick-next{
     width: 45px;
-    z-index: 100;
+    z-index: 40;
 }
 
 /* Dots Styles*/
@@ -23,11 +23,3 @@
     color: orange; 
 }
 
-.slick-slide div{
- padding: 5px;
-}
- 
-
-.slick-prev{
-    color: red;
-}
