@@ -14,11 +14,11 @@ const NavBar = () => {
   const openClose = () => setIsOpen(!isOpen);
 
   const nameButtons = {
-    button1: "Inicio",
+    button1: "INICIO",
     button2: "Hombres",
     button3: "Mujeres",
     button4: "Marcas",
-    button5: "Contactos",
+    button5: "CONTACTOS",
   };
 
   return (
