@@ -30,7 +30,7 @@ const NavBar = () => {
         </button>
 
         {/* LOGO */}
-        <div className="flex md:absolute flex-row items-center justify-center md:h-[100%] w-full">
+        <div className="flex md:absolute flex-row items-center justify-center h-[100%] w-full">
           <LogoSportwear />
         </div>
 
