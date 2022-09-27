@@ -218,16 +218,17 @@ const productosMujer = [
 
 export const App = () => {
   return (
-    <div className="h-screen">
+    <div className="h-screen overflow-x-hidden">
       {/* Parte de seba */}
       <NavBar></NavBar>
 
       {/* Aca va la parte de pablo, es solo un separador esto  */}
-      <section className="w-full h-[60vh] ">
+      <section className=" w-[100%] md:h-[60vh] mt-[20%] md:mt-[6.4%] ">
         <HomeSlider></HomeSlider>
       </section>
 
       {/* Parte de Julian */}
+      <section>
       <div className="container px-5 mx-auto productsSlider__container md:px-0">
         <div className="my-[50px] grid grid-cols-1 md:grid-cols-[20%_80%] items-center">
           <div className="mb-4 product__slider-ad justify-self-center lg:mb-0 md:mr-auto">
@@ -260,6 +261,7 @@ export const App = () => {
           </div>
         </div>
       </div>
+      </section>
       {/* Parte de Julian */}
       {/* Parte de Fede */}
       <SliderMarcas />

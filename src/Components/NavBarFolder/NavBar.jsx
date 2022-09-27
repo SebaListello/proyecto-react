@@ -23,19 +23,19 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="flex flex-row w-full h-[10%] justify-between md:justify-end items-center">
+      <nav className=" flex z-50 bg-white opacity-100 fixed flex-row w-full h-[10%] justify-between md:justify-end items-center">
         {/* BOTON DE MENÚ MOVIL */}
         <button className="flex items-center justify-center mx-3 md:hidden">
           <div onClick={openClose}>{isOpen ? <SvgCruz /> : <SvgMenu />}</div>
         </button>
 
         {/* LOGO */}
-        <div className="flex flex-row items-center justify-center h-full md:w-full">
+        <div className="flex md:absolute flex-row items-center justify-center md:h-[100%] w-full">
           <LogoSportwear />
         </div>
 
         {/* BOTON DE CARRITO, USER, SEARCH */}
-        <div className="flex justify-center h-full md:h-[10%] mx-3 md:absolute flex-rows">
+        <div className="flex justify-center h-full md:h-[100%] mx-3 md:absolute flex-rows">
           <ButtonSearch />
           <ButtonShoppingCart />
           <ButtonLogin />
@@ -54,7 +54,9 @@ const NavBar = () => {
         />
 
         {/* MENU DESKTOP */}
+      
         <MenuDesktopOptions nameButton={nameButtons} />
+      
       </nav>
     </>
   );

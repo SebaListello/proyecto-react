@@ -16,7 +16,7 @@ const MenuDesktopOptions = ({ nameButton }) => {
 
   return (
     <div
-      className={`absolute hidden w-full bg-gradient-to-b grid-cols-2 from-orange-400 to-orange-700 top-[10%] md:flex justify-center items-center`}
+      className={`absolute z-50 hidden w-full bg-gradient-to-b grid-cols-2 from-orange-400 to-orange-700 top-[100%] md:flex justify-center items-center`}
     >
       <ul className="flex flex-row leading-10 text-[1rem] font-inter font-normal text-white">
         <li>
