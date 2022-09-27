@@ -250,7 +250,7 @@ export const App = () => {
 
       {/* Social section */}
 
-      {/* Social section */}
+      {/* Redes sociales section */}
       <Social />
     </div>
   );

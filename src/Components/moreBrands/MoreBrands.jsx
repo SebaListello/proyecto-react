@@ -4,7 +4,7 @@ const moreBrands = [morebrands_1, morebrands_2, morebrands_3, morebrands_4]
 
 export const MoreBrands = () => {
   return (
-    <div className='moreBrands__container container mx-auto w-full px-4 md:px-0'>
+    <div className='moreBrands__container container mx-auto w-full px-4 md:px-1'>
 
         <div className='grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
             {moreBrands.map((brand, i) => (
