@@ -193,13 +193,13 @@ const productosMujer = [
 
 export const App = () => {
   return (
-    <div className="h-screen">
+    <div className="h-screen overflow-x-hidden">
       {/* Parte de seba */}
       <NavBar></NavBar>
       {/* Parte de seba */}
 
       {/* Parte de pablo */}
-      <section className="w-full h-[60vh] ">
+      <section className="mt-[20%] md:mt-[18%] lg:mt-[11%] xl:mt-[7%] 2xl:mt-[6%] w-full">
         <HomeSlider></HomeSlider>
       </section>
       {/* Parte de pablo */}
