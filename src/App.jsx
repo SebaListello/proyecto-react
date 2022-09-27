@@ -1,35 +1,10 @@
 import NavBar from "./Components/NavBarFolder/NavBar";
 import SliderMarcas from "./Components/MarcasSlider/SliderMarcas"
 import { ProductsSlider } from "./Components/produtcsSlider/ProductsSlider";
-import {
-  buzo01h,
-  buzo02h,
-  zapatilla01h,
-  zapatilla02h,
-  zapatilla03h,
-  zapatilla04h,
-  reloj01h,
-  pantalon01h,
-  ad01h,
-  ad02h,
-  buzo01m,
-  buzo02m,
-  buzo03m,
-  zapatilla01m,
-  zapatilla02m,
-  calza01m,
-  conjunto01m,
-  bolso01m,
-  ad01m,
-  ad02m,
-  adidas,
-  nike,
-  puma,
-  fila,
-  lecoq,
-} from "./assets/index.js";
 import { HomeSlider } from "./Components/HomeSlider/HomeSlider";
-import MarcasNoSlider from "./Components/MarcasNoSlider/MarcasNoSlider";
+import { MoreBrands } from "./Components/moreBrands/MoreBrands";
+import {buzo01h,buzo02h,zapatilla01h,zapatilla02h,zapatilla03h,zapatilla04h,reloj01h,pantalon01h,ad01h,ad02h,buzo01m,buzo02m,buzo03m,zapatilla01m,zapatilla02m,calza01m,conjunto01m,bolso01m,ad01m,ad02m, adidas, nike, puma, fila, lecoq} from "./assets/index.js";
+
 const productosHombre = [
   {
     id: 1,
@@ -218,17 +193,18 @@ const productosMujer = [
 
 export const App = () => {
   return (
-    <div className="h-screen overflow-x-hidden">
+    <div className="h-screen">
       {/* Parte de seba */}
       <NavBar></NavBar>
+      {/* Parte de seba */}
 
-      {/* Aca va la parte de pablo, es solo un separador esto  */}
-      <section className=" w-[100%] md:h-[60vh] mt-[20%] md:mt-[6.4%] ">
+      {/* Parte de pablo */}
+      <section className="w-full h-[60vh] ">
         <HomeSlider></HomeSlider>
       </section>
+      {/* Parte de pablo */}
 
       {/* Parte de Julian */}
-      <section>
       <div className="container px-5 mx-auto productsSlider__container md:px-0">
         <div className="my-[50px] grid grid-cols-1 md:grid-cols-[20%_80%] items-center">
           <div className="mb-4 product__slider-ad justify-self-center lg:mb-0 md:mr-auto">
@@ -261,11 +237,16 @@ export const App = () => {
           </div>
         </div>
       </div>
-      </section>
       {/* Parte de Julian */}
+
       {/* Parte de Fede */}
       <SliderMarcas />
-      <MarcasNoSlider />
+      {/* Parte de Fede */}
+  
+      {/* More brands section  */}
+      <MoreBrands />
+      {/* More brands section  */}
+
     </div>
   );
 };
