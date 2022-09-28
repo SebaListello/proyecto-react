@@ -20,13 +20,14 @@ export const HomeSlider = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    arrows: false
   };
 
   return (
     <div>
       <Slider {...settings}>
         {ImageHomeSlider.map((image, i) => (
-          <div className="homeSlider__container">
+          <div key={i} className="homeSlider__container">
             <img src={image} alt="ImageHomeSlider" />
           </div>
         ))}
@@ -36,4 +37,3 @@ export const HomeSlider = () => {
   );
 };
 
-export default HomeSlider;

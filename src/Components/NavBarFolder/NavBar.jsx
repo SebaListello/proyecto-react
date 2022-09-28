@@ -1,49 +1,61 @@
-import { useState } from 'react'
+import { useState } from "react";
+import React from "react";
+import MenuMobileOptions from "./MenuMobileOptions";
+import MenuDesktopOptions from "./MenuDesktopOptions";
 import { MdMenu, MdClose, MdOutlineShoppingCart, MdOutlineSearch, MdLogin} from 'react-icons/md'
-import MenuMobileOptions from './MenuMobileOptions'
 import logoSportwear from '../../assets/LogoSportwear.svg'
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const openClose = () => setIsOpen(!isOpen)
+  const [isOpen, setIsOpen] = useState(false);
+  const openClose = () => setIsOpen(!isOpen);
 
-  //>>>>>>>>>>ESTILOS BOTONES MENU DESKTOP<<<<<<<<<<<
-  const styleButtons = 'hover:text-[.85rem] rounded-lg p-1 hover:text-orange-300 grad mx-2 duration-100 ease-in-out uppercase '
+  const nameButtons = {
+    button1: "INICIO",
+    button2: "Hombres",
+    button3: "Mujeres",
+    button4: "Marcas",
+    button5: "CONTACTOS",
+  };
 
   return (
     <>
-      <nav className="flex flex-row w-full h-[10%] justify-between md:justify-end items-center">
+      <nav className=" flex z-50 bg-white opacity-100 fixed flex-row w-full h-[90px] justify-between md:justify-end items-center">
         {/* BOTON DE MENÚ MOVIL */}
         <button className="flex items-center justify-center mx-3 md:hidden">
-          <div onClick={openClose}>{isOpen ? <MdClose size={24} color={"orange"}/> : <MdMenu size={24} color={"var(--clr-primary)"}/>}</div>
+          <div onClick={openClose}>{isOpen ? <MdClose size={24} color={"var(--clr-primary)"} /> : <MdMenu size={24} color={"var(--clr-primary)"}/>}</div>
         </button>
 
         {/* LOGO */}
-        <div className="flex flex-row items-center justify-center h-full md:w-full">
-          <img src={logoSportwear} alt="Sportswear" />
+        <div className="flex md:absolute flex-row items-center justify-center h-[100%] w-full">
+          <img src={logoSportwear} alt="Logo" />
         </div>
 
         {/* BOTON DE CARRITO, USER, SEARCH */}
-        <div className="flex items-center justify-center h-full md:h-[10%] mx-3 md:absolute flex-rows">
-          <MdOutlineSearch size={28} color={"var(--clr-primary)"}/>
+        <div className="flex items-center justify-center h-full md:h-[100%] mx-3 md:absolute flex-rows">
+          <MdOutlineSearch size={24} color={"var(--clr-primary)"}/>
           <MdOutlineShoppingCart size={24} color={"var(--clr-primary)"}/>
           <MdLogin size={24} color={"var(--clr-primary)"}/>
         </div>
 
         {/* MENU MOVIL */}
-        <MenuMobileOptions transition={isOpen? 'translate-x-0' : 'translate-x-full'}/>
-        
+        <MenuMobileOptions
+          nameButton={nameButtons}
+          openClose={openClose}
+          transitionMenuGral={
+            isOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
+          }
+          transitionMenuButton={
+            isOpen ? "translate-x-0 opacity-100" : "translate-x-48 opacity-0"
+          }
+        />
+
         {/* MENU DESKTOP */}
-        <div className="absolute hidden md:flex justify-center items-center text-[.8rem] bg-gradient-to-b from-gray-800 via-gray-900 to-black  py-6 text-white h-[5%] top-[10%] w-full">
-          <button className={`${styleButtons}`} href="#">Inicio</button>
-          <button className={`${styleButtons}`} href="#">Hombres</button>
-          <button className={`${styleButtons}`} href="#">Mujeres</button>
-          <button className={`${styleButtons}`} href="#">Marcas</button>
-          <button className={`${styleButtons}`} href="#">Contactos</button>
-        </div>
+      
+        <MenuDesktopOptions nameButton={nameButtons} />
+      
       </nav>
     </>
   );
-}
+};
 
-export default NavBar
+export default NavBar;

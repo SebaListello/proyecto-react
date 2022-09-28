@@ -1,5 +1,7 @@
 import NavBar from "./Components/NavBarFolder/NavBar";
+import SliderMarcas from "./Components/MarcasSlider/SliderMarcas"
 import { ProductsSlider } from "./Components/produtcsSlider/ProductsSlider";
+<<<<<<< HEAD
 import  Footer  from "./Components/FooterFolder/Footer";
 import {
   buzo01h,
@@ -28,7 +30,14 @@ import {
   fila,
   lecoq,
 } from "./assets/index.js";
+=======
+>>>>>>> 605571b7ef5bfedbd588c2d69e81fe8d4bf8ffd4
 import { HomeSlider } from "./Components/HomeSlider/HomeSlider";
+import { MoreBrands } from "./Components/moreBrands/MoreBrands";
+import { Social } from "./Components/social/Social"
+import { NewsForm } from "./Components/formulario/NewsForm"
+import {buzo01h,buzo02h,zapatilla01h,zapatilla02h,zapatilla03h,zapatilla04h,reloj01h,pantalon01h,ad01h,ad02h,buzo01m,buzo02m,buzo03m,zapatilla01m,zapatilla02m,calza01m,bolso01m,ad01m,ad02m, adidas, nike, puma, fila, lecoq} from "./assets/index.js";
+
 const productosHombre = [
   {
     id: 1,
@@ -217,14 +226,16 @@ const productosMujer = [
 
 export const App = () => {
   return (
-    <div className="h-screen">
+    <div className="h-screen overflow-x-hidden">
       {/* Parte de seba */}
-      <NavBar></NavBar>
+      <NavBar/>
+      {/* Parte de seba */}
 
-      {/* Aca va la parte de pablo, es solo un separador esto  */}
-      <section className="w-full h-[60vh] border border-red-500">
-        <HomeSlider></HomeSlider>
+      {/* Parte de pablo */}
+      <section className="homeslider mt-[90px] md:mt-[120px] w-full">
+        <HomeSlider/>
       </section>
+      {/* Parte de pablo */}
 
       {/* Parte de Julian */}
       <div className="container px-5 mx-auto productsSlider__container md:px-0">
@@ -260,7 +271,25 @@ export const App = () => {
         </div>
       </div>
       {/* Parte de Julian */}
+<<<<<<< HEAD
       <Footer />
+=======
+
+      {/* Parte de Fede */}
+      <SliderMarcas />
+      {/* Parte de Fede */}
+  
+      {/* More brands section  */}
+      <MoreBrands />
+      {/* More brands section  */}
+
+      {/* Social section */}
+
+      {/* NewSletter section */}
+      <NewsForm />
+      {/* Redes sociales section */}
+      <Social />
+>>>>>>> 605571b7ef5bfedbd588c2d69e81fe8d4bf8ffd4
     </div>
   );
 };
