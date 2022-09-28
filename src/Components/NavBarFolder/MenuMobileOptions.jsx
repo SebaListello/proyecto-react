@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { Indumentaria, Marcas } from "./Data/DataProducts";
-import SvgClose from "./Svg/SvgClose";
+import { MdClose } from 'react-icons/md'
+
 
 const MenuMobileOptions = ({
   nameButton,
@@ -37,7 +38,7 @@ const MenuMobileOptions = ({
             className={`${menuOptionsList}`}
             onClick={() => setClick({ men: !click.men })}
           >
-            {click.men ? <SvgClose /> : nameButton.button2}
+            {click.men ? <MdClose size={24} color={"white"} /> : nameButton.button2}
 
             <div
               className={click.men? subMenuOptionsList : transitionSubMenu}
@@ -54,7 +55,7 @@ const MenuMobileOptions = ({
             className={`${menuOptionsList}`}
             onClick={() => setClick({ women: !click.women })}
           >
-            {click.women ? <SvgClose /> : nameButton.button3}
+            {click.women ? <MdClose size={24} color={"white"} /> : nameButton.button3}
 
             <div
               className={click.women? subMenuOptionsList : transitionSubMenu}
@@ -71,7 +72,7 @@ const MenuMobileOptions = ({
             className={`${menuOptionsList}`}
             onClick={() => setClick({ brands: !click.brands })}
           >
-            {click.brands ? <SvgClose /> : nameButton.button4}
+            {click.brands ? <MdClose size={24} color={"white"} /> : nameButton.button4}
 
             <div
               className={click.brands? subMenuOptionsList : transitionSubMenu}

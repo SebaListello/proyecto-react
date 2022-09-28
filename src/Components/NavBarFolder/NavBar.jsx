@@ -1,13 +1,9 @@
 import { useState } from "react";
 import React from "react";
-import ButtonLogin from "./ButtonLogin";
-import ButtonSearch from "./ButtonSearch";
-import ButtonShoppingCart from "./ButtonShoppingCart";
 import MenuMobileOptions from "./MenuMobileOptions";
-import SvgCruz from "./Svg/SvgCruz";
-import SvgMenu from "./Svg/SvgMenu";
-import LogoSportwear from "./Svg/LogoSportwear";
 import MenuDesktopOptions from "./MenuDesktopOptions";
+import { MdMenu, MdClose, MdOutlineShoppingCart, MdOutlineSearch, MdLogin} from 'react-icons/md'
+import logoSportwear from '../../assets/LogoSportwear.svg'
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,19 +22,19 @@ const NavBar = () => {
       <nav className=" flex z-50 bg-white opacity-100 fixed flex-row w-full h-[10%] justify-between md:justify-end items-center">
         {/* BOTON DE MENÚ MOVIL */}
         <button className="flex items-center justify-center mx-3 md:hidden">
-          <div onClick={openClose}>{isOpen ? <SvgCruz /> : <SvgMenu />}</div>
+          <div onClick={openClose}>{isOpen ? <MdClose size={24} color={"var(--clr-primary)"} /> : <MdMenu size={24} color={"var(--clr-primary)"}/>}</div>
         </button>
 
         {/* LOGO */}
         <div className="flex md:absolute flex-row items-center justify-center h-[100%] w-full">
-          <LogoSportwear />
+          <img src={logoSportwear} alt="Logo" />
         </div>
 
         {/* BOTON DE CARRITO, USER, SEARCH */}
-        <div className="flex justify-center h-full md:h-[100%] mx-3 md:absolute flex-rows">
-          <ButtonSearch />
-          <ButtonShoppingCart />
-          <ButtonLogin />
+        <div className="flex items-center justify-center h-full md:h-[100%] mx-3 md:absolute flex-rows">
+          <MdOutlineSearch size={24} color={"var(--clr-primary)"}/>
+          <MdOutlineShoppingCart size={24} color={"var(--clr-primary)"}/>
+          <MdLogin size={24} color={"var(--clr-primary)"}/>
         </div>
 
         {/* MENU MOVIL */}
