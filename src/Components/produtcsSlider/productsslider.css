@@ -1,7 +1,7 @@
 /* Arrows styles */
 .slick-prev::before, .slick-next::before{
     font-size: 25px;
-    color: black;
+    color: orange;
 }
 .slick-prev{
     width: 50px;
