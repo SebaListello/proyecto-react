@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {
   imagen_1_desktop, imagen_1_mobile, imagen_2_desktop, imagen_2_mobile, imagen_3_desktop, imagen_3_mobile, imagen_4_desktop, imagen_4_mobile, imagen_5_desktop, imagen_5_mobile
-} from "../../assets/imageHomeSlider/index";
+} from "../../assets/ImageHomeSlider/index";
 
 const ImageHomeSliderDesktop = [imagen_1_desktop, imagen_2_desktop, imagen_3_desktop, imagen_4_desktop, imagen_5_desktop ];
 const ImageHomeSliderMobile = [imagen_1_mobile, imagen_2_mobile, imagen_3_mobile, imagen_4_mobile, imagen_5_mobile ];
