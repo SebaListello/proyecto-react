@@ -47,8 +47,7 @@ const brands = [
     
 ]
 
-
-export const SliderMarcas = () => {
+export const BrandSlider = () => {
     var settings = {
         dots: true,
         infinite: true,
@@ -76,7 +75,7 @@ export const SliderMarcas = () => {
 
   return (
     <div className=" max-w-[850px] mx-auto my-[150px] px-4 ">
-        <h2 className='text-2xl text-center uppercase font-bold mb-10'>Nuestras marcas</h2>
+        <h2 className='text-2xl text-center uppercase font-bold mb-10'>Ver marcas</h2>
         <Slider {...settings}>
              {brands.map(({id, image, title}) => (
                     <div key={id}>

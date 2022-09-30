@@ -1,11 +1,10 @@
 import { useState } from "react";
-import React from "react";
 import MenuMobileOptions from "./MenuMobileOptions";
 import MenuDesktopOptions from "./MenuDesktopOptions";
 import { MdMenu, MdClose, MdOutlineShoppingCart, MdOutlineSearch, MdLogin} from 'react-icons/md'
 import logoSportwear from '../../assets/LogoSportwear.svg'
 
-const NavBar = () => {
+export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const openClose = () => setIsOpen(!isOpen);
 
@@ -58,4 +57,3 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
