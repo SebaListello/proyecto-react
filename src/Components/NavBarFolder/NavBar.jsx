@@ -31,7 +31,7 @@ const NavBar = () => {
         </div>
 
         {/* BOTON DE CARRITO, USER, SEARCH */}
-        <div className="flex items-center justify-center h-full md:h-[100%] mx-3 md:absolute flex-rows">
+        <div className="flex items-center justify-center h-full md:h-[100%] mx-4 md:absolute flex-rows">
           <MdOutlineSearch size={24} color={"var(--clr-primary)"}/>
           <MdOutlineShoppingCart size={24} color={"var(--clr-primary)"}/>
           <MdLogin size={24} color={"var(--clr-primary)"}/>
