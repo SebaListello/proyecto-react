@@ -1,0 +1,199 @@
+{   
+    "productos": {
+        "bannershombres":{
+            
+                "imagendesktop": "./images/offers/hombre/hombre_1.svg",
+                "imagenmobile": "./images/offers/hombre/hombre_2.svg"
+        },
+        "bannersmujeres":{
+                "imagendesktop": "./images/offers/mujer/mujer_1.svg",
+                "imagenmobile": "./images/offers/mujer/mujer_2.svg"
+        },
+        
+        "productoshombres": [
+            {
+                "id": 1,
+                "imagen":"./images/offers/hombre/buzo_h_2.svg",
+                "marca": "Adidas",
+                "icono": "./images/brands/adidas.svg",
+                "precio": "$36.999",
+                "nombre": "Zapatillas Adidas Forum Mid de Hombre",
+                "descripcion": "3 cuotas de $12.333 sin interés"
+            },
+            {
+                "id": 2,
+                "imagen":"./images/offers/hombre/zapatilla_h_2.svg",
+                "marca": "Nike",
+                "icono": "./images/brands/nike.svg",
+                "precio": "$42.999",
+                "nombre": "Zapatillas Nike Air Max 90 Se de Hombre",
+                "descripcion": "3 cuotas de $14.333 sin interés"
+            },
+            {
+                "id": 3,
+                "imagen":"./images/offers/hombre/zapatilla_h_3.svg",
+                "marca": "Le Coq",
+                "icono": "images/brands/lecoq.svg",
+                "precio": "$20.999",
+                "nombre": "Zapatillas Le Coq Sportif R850 Colors de Hombre",
+                "descripcion": "3 cuotas de $5.666 sin interés"
+            },
+            {
+                "id": 4,
+                "imagen":"./images/offers/hombre/buzo_h_1.svg",
+                "marca": "Adidas",
+                "icono": "./images/brands/adidas.svg",
+                "precio": "$16.999",
+                "nombre": "Buzo Adidas Trefoil Hoodie de Hombre",
+                "descripcion": "3 cuotas de $5.666 sin interés"
+            },
+            {
+                "id": 5,
+                "imagen":"./images/offers/hombre/zapatilla_h_4.svg",
+                "marca": "Nike",
+                "icono": "./images/brands/nike.svg",
+                "precio": "$42.999",
+                "nombre": "Zapatillas Nike Air Max 90 Se de Hombre",
+                "descripcion": "3 cuotas de $14.333 sin interés"
+            },
+            {
+                "id": 6,
+                "imagen":"./images/offers/hombre/buzo_h_2.svg",
+                "marca": "Adidas",
+                "icono": "./images/brands/adidas.svg",
+                "precio": "$23.099",
+                "nombre": "Buzo adidas Forum De Hombre",
+                "descripcion": "3 cuotas de $ 7.699,66 sin interés"
+            },
+            {
+                "id": 7,
+                "imagen":"./images/offers/hombre/pantalon_h_1.svg",
+                "marca": "Adidas",
+                "icono": "./images/brands/adidas.svg",
+                "precio": "$28.999",
+                "nombre": "Pantalón adidas Adicolor Colorblock De Hombre",
+                "descripcion": "3 cuotas de $ 9.666,33 sin interés"
+            },
+            {
+                "id": 8,
+                "imagen":"./images/offers/hombre/reloj_h_1.svg",
+                "marca": "Adidas",
+                "icono": "./images/brands/adidas.svg",
+                "precio": "$20.099",
+                "nombre": "Reloj Mistral Smart L13 De Hombre",
+                "descripcion": "3 cuotas de $ 6.699,66 sin interés"
+            },
+            {
+                "id": 9,
+                "imagen":"./images/offers/hombre/reloj_h_1.svg",
+                "marca": "Adidas",
+                "icono": "./images/brands/adidas.svg",
+                "precio": "$20.099",
+                "nombre": "Reloj Mistral Smart L13 De Hombre",
+                "descripcion": "3 cuotas de $ 6.699,66 sin interés"
+            },
+            {
+                "id": 10,
+                "imagen":"./images/offers/hombre/reloj_h_1.svg",
+                "marca": "Adidas",
+                "icono": "./images/brands/adidas.svg",
+                "precio": "$20.099",
+                "nombre": "Reloj Mistral Smart L13 De Hombre",
+                "descripcion": "3 cuotas de $ 6.699,66 sin interés"
+            }
+        ],
+
+        "productosmujeres": [
+            {
+                "id": 1,
+                "imagen":"./images/offers/mujer/buzo_m_1.svg",
+                "marca": "Adidas",
+                "icono": "./images/brands/adidas.svg",
+                "precio": "$19.999",
+                "nombre": "Buzo adidas Trifolio De Mujer",
+                "descripcion": "3 cuotas de $ 6.599,66 sin interés"
+            },
+            {
+                "id": 2,
+                "imagen":"./images/offers/mujer/zapatilla_m_1.svg",
+                "marca": "Nike",
+                "icono": "./images/brands/nike.svg",
+                "precio": "$35.999",
+                "nombre": "Zapatillas Nike Blazer Mid 77 De Mujer",
+                "descripcion": "3 cuotas de $ 11.999,66 sin interés"
+            },
+            {
+                "id": 3,
+                "imagen":"./images/offers/mujer/buzo_m_2.svg",
+                "marca": "Puma",
+                "icono": "./images/brands/puma.svg",
+                "precio": "$22.999",
+                "nombre": "Buzo Puma Classics Block De Mujer",
+                "descripcion": "3 cuotas de $ 7.666,33 sin interés"
+            },
+            {
+                "id": 4,
+                "imagen":"./images/offers/mujer/calzas_m_1.svg",
+                "marca": "Fila",
+                "icono": "./images/brands/fila.svg",
+                "precio": "$14.999",
+                "nombre": "Calza Fila Classics Wonder Woman De Mujer",
+                "descripcion": "3 cuotas de $ 4.866,33 sin interés"
+            },
+            {
+                "id": 5,
+                "imagen":"./images/offers/mujer/bolso_m_1.svg",
+                "marca": "Adidas",
+                "icono": "./images/brands/adidas.svg",
+                "precio": "$19.999",
+                "nombre": "Bolso adidas Shopper Metalizado De Mujer 19 Litros",
+                "descripcion": "3 cuotas de $ 6.416,33 sin interés"
+            },
+            {
+                "id": 6,
+                "imagen":"./images/offers/mujer/buzo_m_3.svg",
+                "marca": "Adidas",
+                "icono": "./images/brands/adidas.svg",
+                "precio": "$27.099",
+                "nombre": "Campera adidas Floral De Mujer",
+                "descripcion": "3 cuotas de $ 9.166,33 sin interés"
+            },
+            {
+                "id": 7,
+                "imagen":"./images/offers/mujer/conjunto_m_1.svg",
+                "marca": "Adidas",
+                "icono": "./images/brands/adidas.svg",
+                "precio": "$27.999",
+                "nombre": "Campera adidas Floral De Mujer",
+                "descripcion": "3 cuotas de $ 9.666,33 sin interés"
+            },
+            {
+                "id": 8,
+                "imagen":"./images/offers/mujer/zapatilla_m_2.svg",
+                "marca": "Fila",
+                "icono": "./images/brands/fila.svg",
+                "precio": "$23.099",
+                "nombre": "Zapatillas Fila Sandenal Wedge De Mujer",
+                "descripcion": "3 cuotas de $ 7.916,33 sin interés"
+            },
+            {
+                "id": 9,
+                "imagen":"./images/offers/mujer/bolso_m_1.svg",
+                "marca": "Adidas",
+                "icono": "./images/brands/adidas.svg",
+                "precio": "$19.999",
+                "nombre": "Bolso adidas Shopper Metalizado De Mujer 19 Litros",
+                "descripcion": "3 cuotas de $ 6.416,33 sin interés"
+            },
+            {
+                "id": 10,
+                "imagen":"./images/offers/mujer/conjunto_m_1.svg",
+                "marca": "Adidas",
+                "icono": "./images/brands/adidas.svg",
+                "precio": "$27.999",
+                "nombre": "Campera adidas Floral De Mujer",
+                "descripcion": "3 cuotas de $ 9.666,33 sin interés"
+            }
+        ]
+    }
+}

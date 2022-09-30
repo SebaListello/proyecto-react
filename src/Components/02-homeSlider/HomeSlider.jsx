@@ -3,10 +3,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {
   imagen_1_desktop, imagen_1_mobile, imagen_2_desktop, imagen_2_mobile, imagen_3_desktop, imagen_3_mobile, imagen_4_desktop, imagen_4_mobile, imagen_5_desktop, imagen_5_mobile
-} from "../../assets/ImageHomeSlider/index";
+} from "../../assets/imageHomeSlider/index";
 
-const ImageHomeSliderDesktop = [imagen_1_desktop, imagen_2_desktop, imagen_3_desktop, imagen_4_desktop, imagen_5_desktop ];
-const ImageHomeSliderMobile = [imagen_1_mobile, imagen_2_mobile, imagen_3_mobile, imagen_4_mobile, imagen_5_mobile ];
+const imageHomeSliderDesktop = [imagen_1_desktop, imagen_2_desktop, imagen_3_desktop, imagen_4_desktop, imagen_5_desktop ];
+const imageHomeSliderMobile = [imagen_1_mobile, imagen_2_mobile, imagen_3_mobile, imagen_4_mobile, imagen_5_mobile ];
 
 export const HomeSlider = () => {
   const settings = {
@@ -22,11 +22,11 @@ export const HomeSlider = () => {
   };
 
   return (
-    <div>
+    <div className="homeslider mt-[90px] md:mt-[120px] w-full">
       {/* Mobile home slider */}
       <div className="visible md:hidden p-4">
         <Slider {...settings}>
-          {ImageHomeSliderMobile.map((image, i) => (
+          {imageHomeSliderMobile.map((image, i) => (
             <div key={i} className="homeSlider__container-mobile">
               <a href="#">
                <img src={image} alt="ImageHomeSlider" />
@@ -39,7 +39,7 @@ export const HomeSlider = () => {
       <div className="hidden md:block">
         {/* Desktop home slider */}
         <Slider {...settings}>
-          {ImageHomeSliderDesktop.map((image, i) => (
+          {imageHomeSliderDesktop.map((image, i) => (
             <div key={i} className="homeSlider__container-desktop ">
               <a href="#">
                <img src={image} alt="ImageHomeSlider" />

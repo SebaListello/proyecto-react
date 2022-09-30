@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import { Indumentaria, Marcas } from "./Data/DataProducts";
 import { MdClose } from 'react-icons/md'
