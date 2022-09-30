@@ -1,4 +1,4 @@
-import {NavBar, HomeSlider, ProductSlider, BrandSlider, OurBrands, NewsForm, SocialNetWorks} from './components'
+import {NavBar, HomeSlider, ProductSlider, BrandSlider, OurBrands, NewsForm, SocialNetWorks} from './Components'
 
 export const App = () => {
   return (
