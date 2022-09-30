@@ -6,6 +6,7 @@ import { MoreBrands } from "./Components/moreBrands/MoreBrands";
 import { Social } from "./Components/social/Social"
 import { NewsForm } from "./Components/formulario/NewsForm"
 import {buzo01h,buzo02h,zapatilla01h,zapatilla02h,zapatilla03h,zapatilla04h,reloj01h,pantalon01h,ad01h,ad02h,buzo01m,buzo02m,buzo03m,zapatilla01m,zapatilla02m,calza01m,bolso01m,ad01m,ad02m, adidas, nike, puma, fila, lecoq} from "./assets/index.js";
+import { ShoppingCart } from "./Components/shoppingCart/ShoppingCart";
 
 const productosHombre = [
   {
@@ -255,6 +256,8 @@ export const App = () => {
       <NewsForm />
       {/* Redes sociales section */}
       <Social />
+
+      <ShoppingCart/>
     </div>
   );
 };
