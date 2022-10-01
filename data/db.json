@@ -195,6 +195,7 @@
             }
         ]
     },
+
     "homeslider": {
         "desktop":{
             "imagen1": "./images/ImageHomeSlider/imagen_1_desktop.svg",
@@ -210,5 +211,49 @@
             "imagen4": "./images/ImageHomeSlider/imagen_4_mobile.svg",
             "imagen5": "./images/ImageHomeSlider/imagen_5_mobile.svg"
         }
-    }
+    },
+    
+     "brandslider": [
+        {
+            "id": 1,
+            "image": "./images/brandSlider/adidas.svg",
+            "title": "Adidas"
+        },
+        {
+            "id": 2,
+            "image": "./images/brandSlider/nike.svg",
+            "title": "Nike"
+        },
+        {
+            "id": 3,
+            "image": "./images/brandSlider/fila.svg",
+            "title": "Fila"
+        },
+        {
+            "id": 4,
+            "image": "./images/brandSlider/montange.svg",
+            "title": "Montange"
+        },
+        {
+            "id": 5,
+            "image": "./images/brandSlider/reebok.svg",
+            "title": "Reebok"
+        },
+        {
+            "id": 6,
+            "image": "./images/brandSlider/puma.svg",
+            "title": "Puma"
+        },
+        {
+            "id": 7,
+            "image": "./images/brandSlider/topper.svg",
+            "title": "Topper"
+        },
+        {
+            "id": 8,
+            "image": "./images/brandSlider/underarmour.svg",
+            "title": "Under armour"
+        }
+    ]
+    
 }

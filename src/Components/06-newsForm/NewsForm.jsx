@@ -2,7 +2,7 @@ import React from 'react'
 
 export const NewsForm = () => {
   return (
-    <div className='bg-black  min-h-[35vh] sm:h-[35vh] mt-[200px]'>
+    <div className='bg-black  min-h-[35vh] sm:h-[35vh] '>
 
         <div className="container h-full mx-auto grid sm:grid-cols-2 items-center p-5 gap-x-10">
             <div className="Form___text p-10">

@@ -16,7 +16,7 @@ export const OurBrands = () => {
             ))}
         </div>
 
-        <div className="ourbrands__benefits w-full flex justify-center flex-wrap  mt-[90px] items-stretch gap-[100px]">
+        <div className="ourbrands__benefits w-full flex justify-center flex-wrap  my-[160px] items-stretch gap-[100px]">
             <div className="ourbrands__benefits-benefit flex flex-col text-center items-center justify-between">
                 <FaTruck color='var(--clr-primary)' size={30}/>
                 <h2 className='uppercase my-3 font-bold '>Envios gratis desde $19.99</h2>
