@@ -1,7 +1,6 @@
 {   
     "productos": {
         "bannershombres":{
-            
                 "imagendesktop": "./images/offers/hombre/hombre_1.svg",
                 "imagenmobile": "./images/offers/hombre/hombre_2.svg"
         },
@@ -195,5 +194,21 @@
                 "descripcion": "3 cuotas de $ 9.666,33 sin interés"
             }
         ]
+    },
+    "homeslider": {
+        "desktop":{
+            "imagen1": "./images/ImageHomeSlider/imagen_1_desktop.svg",
+            "imagen2": "./images/ImageHomeSlider/imagen_2_desktop.svg",
+            "imagen3": "./images/ImageHomeSlider/imagen_3_desktop.svg",
+            "imagen4": "./images/ImageHomeSlider/imagen_4_desktop.svg",
+            "imagen5": "./images/ImageHomeSlider/imagen_5_desktop.svg"
+        },
+        "mobile":{
+            "imagen1": "./images/ImageHomeSlider/imagen_1_mobile.svg",
+            "imagen2": "./images/ImageHomeSlider/imagen_2_mobile.svg",
+            "imagen3": "./images/ImageHomeSlider/imagen_3_mobile.svg",
+            "imagen4": "./images/ImageHomeSlider/imagen_4_mobile.svg",
+            "imagen5": "./images/ImageHomeSlider/imagen_5_mobile.svg"
+        }
     }
 }

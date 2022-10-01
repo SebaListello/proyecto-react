@@ -1,14 +1,25 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {
-  imagen_1_desktop, imagen_1_mobile, imagen_2_desktop, imagen_2_mobile, imagen_3_desktop, imagen_3_mobile, imagen_4_desktop, imagen_4_mobile, imagen_5_desktop, imagen_5_mobile
-} from "../../assets/imageHomeSlider/index";
+import { useFetch } from "../../hooks/useFetch";
+import {Spinner} from '../spinner/Spinner'
 
-const imageHomeSliderDesktop = [imagen_1_desktop, imagen_2_desktop, imagen_3_desktop, imagen_4_desktop, imagen_5_desktop ];
-const imageHomeSliderMobile = [imagen_1_mobile, imagen_2_mobile, imagen_3_mobile, imagen_4_mobile, imagen_5_mobile ];
+
 
 export const HomeSlider = () => {
+
+    const url = "http://localhost:8080/homeslider";
+    const { data, isLoading } = useFetch(url);
+
+    
+  if(isLoading){
+      return ( 
+     <Spinner />
+    )
+  }
+    
+    const imagenesDesktop = Object.values(data.desktop);
+    const imagenesMobile = Object.values(data.mobile);
   const settings = {
     autoplay: true,
     speed: 5000,
@@ -20,13 +31,13 @@ export const HomeSlider = () => {
     slidesToScroll: 1,
     arrows: false
   };
-
   return (
+    
     <div className="homeslider mt-[90px] md:mt-[120px] w-full">
       {/* Mobile home slider */}
       <div className="visible md:hidden p-4">
         <Slider {...settings}>
-          {imageHomeSliderMobile.map((image, i) => (
+          {imagenesMobile.map((image, i) => (
             <div key={i} className="homeSlider__container-mobile">
               <a href="#">
                <img src={image} alt="ImageHomeSlider" />
@@ -39,7 +50,7 @@ export const HomeSlider = () => {
       <div className="hidden md:block">
         {/* Desktop home slider */}
         <Slider {...settings}>
-          {imageHomeSliderDesktop.map((image, i) => (
+          {imagenesDesktop.map((image, i) => (
             <div key={i} className="homeSlider__container-desktop ">
               <a href="#">
                <img src={image} alt="ImageHomeSlider" />

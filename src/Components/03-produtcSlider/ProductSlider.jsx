@@ -1,5 +1,6 @@
 import { SliderL } from './SliderL';
 import { useFetch } from '../../hooks/useFetch';
+import {Spinner} from '../spinner/Spinner'
 export const ProductSlider = () => {
 
     const url = "http://localhost:8080/productos";
@@ -7,8 +8,10 @@ export const ProductSlider = () => {
     const { bannershombres, bannersmujeres, productoshombres, productosmujeres} = data;
   
     if(isLoading){
-      return (<h1>Cargando...</h1>)
-    }
+      return ( 
+      <Spinner />
+    )
+  }
 
   return (
     <div className="container px-5 mx-auto productsSlider__container md:px-0">
