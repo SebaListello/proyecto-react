@@ -1,4 +1,5 @@
 import {NavBar, HomeSlider, ProductSlider, BrandSlider, OurBrands, NewsForm, SocialNetWorks} from './Components'
+import FooterItems from "./Components/08-FooterFolder/FooterItems"
 
 export const App = () => {
   return (
@@ -11,6 +12,7 @@ export const App = () => {
       <OurBrands />
       <NewsForm />
       <SocialNetWorks />
+      <FooterItems />
     </div>
     
   );
