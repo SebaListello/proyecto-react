@@ -56,8 +56,8 @@ export const NavBar = () => {
           <ShoppingCart
             transitionCartItem={
               isOpenCart
-                ? "translate-x-0 opacity-100"
-                : "translate-x-full opacity-0"
+                ? "translate-y-0 opacity-100"
+                : "translate-y-full opacity-0"
             }
           />
 
