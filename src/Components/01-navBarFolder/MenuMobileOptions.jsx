@@ -23,7 +23,7 @@ const MenuMobileOptions = ({
 
   return (
     <div
-      className={`md:hidden z-50 shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] absolute w-full bg-gradient-to-b from-orange-400 to-orange-700 top-[100%] transform transition duration-300 flex justify-center items-center py-[3%] ${transitionMenuGral}`}
+      className={`md:hidden z-[999] shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] absolute w-full bg-gradient-to-b from-orange-400 to-orange-700 top-[100%] transform transition duration-300 flex justify-center items-center py-[3%] ${transitionMenuGral}`}
     >
       <ul className="flex flex-col leading-10 text-[1rem] font-inter font-normal text-white items-center">
         <li>
