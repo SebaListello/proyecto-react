@@ -1,12 +1,18 @@
 import { useState } from "react";
 import MenuMobileOptions from "./MenuMobileOptions";
 import MenuDesktopOptions from "./MenuDesktopOptions";
-import { MdMenu, MdClose, MdOutlineShoppingCart, MdOutlineSearch, MdLogin} from 'react-icons/md'
-import logoSportwear from '../../assets/LogoSportwear.svg'
+import logoSportwear from "../../assets/LogoSportwear.svg";
+import { ShoppingCart } from "../shoppingCart/ShoppingCart";
+import {MdMenu, MdClose, MdOutlineShoppingCart, MdOutlineSearch, MdLogin,} from "react-icons/md";
+
 
 export const NavBar = () => {
+
   const [isOpen, setIsOpen] = useState(false);
   const openClose = () => setIsOpen(!isOpen);
+
+  const [isOpenCart, setIsOpenCart] = useState(false);
+  const openCloseCart = () => setIsOpenCart(!isOpenCart);
 
   const nameButtons = {
     button1: "INICIO",
@@ -19,9 +25,16 @@ export const NavBar = () => {
   return (
     <>
       <nav className=" flex z-50 bg-white opacity-100 fixed flex-row w-full h-[90px] justify-between md:justify-end items-center">
+        
         {/* BOTON DE MENÚ MOVIL */}
         <button className="flex items-center justify-center mx-3 md:hidden">
-          <div onClick={openClose}>{isOpen ? <MdClose size={24} color={"var(--clr-primary)"} /> : <MdMenu size={24} color={"var(--clr-primary)"}/>}</div>
+          <div onClick={openClose}>
+            {isOpen ? (
+              <MdClose size={24} color={"var(--clr-primary)"} />
+            ) : (
+              <MdMenu size={24} color={"var(--clr-primary)"} />
+            )}
+          </div>
         </button>
 
         {/* LOGO */}
@@ -31,9 +44,24 @@ export const NavBar = () => {
 
         {/* BOTON DE CARRITO, USER, SEARCH */}
         <div className="flex items-center justify-center h-full md:h-[100%] mx-4 md:absolute flex-rows">
-          <MdOutlineSearch size={24} color={"var(--clr-primary)"}/>
-          <MdOutlineShoppingCart size={24} color={"var(--clr-primary)"}/>
-          <MdLogin size={24} color={"var(--clr-primary)"}/>
+          <MdOutlineSearch size={24} color={"var(--clr-primary)"} />
+
+          <div className="cursor-pointer " onClick={openCloseCart} >
+            {isOpenCart ? (
+              <MdClose size={24} color={"var(--clr-primary)"} />
+            ) : (
+              <MdOutlineShoppingCart size={24} color={"var(--clr-primary)"} />
+            )}
+          </div>
+          <ShoppingCart
+            transitionCartItem={
+              isOpenCart
+                ? "translate-x-0 opacity-100"
+                : "translate-x-full opacity-0"
+            }
+          />
+
+          <MdLogin size={24} color={"var(--clr-primary)"} />
         </div>
 
         {/* MENU MOVIL */}
@@ -49,11 +77,9 @@ export const NavBar = () => {
         />
 
         {/* MENU DESKTOP */}
-      
         <MenuDesktopOptions nameButton={nameButtons} />
-      
+        
       </nav>
     </>
   );
 };
-
