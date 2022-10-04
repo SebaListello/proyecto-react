@@ -38,13 +38,13 @@ export const ShoppingCart = ({transitionCartItem}) => {
           ))}
         </div>  */}
         
-        <div className="flex flex-col items-center justify-center py-2 m-0 text-orange-500 bg-white">
+        <div className="flex flex-col items-center justify-center py-2 m-0 text-[#FD8526] bg-white">
           {cart.map((item, index) => (
             <CartItem key={index} data={item} deleteFromCart={deleteFromCart} />
           ))}
         </div>
         <button
-          className="px-2 py-1 font-bold text-orange-500 transition duration-200 bg-white border-orange-500 hover:text-white border-y hover:bg-orange-500"
+          className="px-2 py-1 font-bold text-[#FD8526] transition duration-200 bg-white border-orange-500 hover:text-white border-y hover:bg-orange-500"
           onClick={clearCart}
         >
           Limpiar Carrito
