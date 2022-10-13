@@ -2,7 +2,6 @@ import { useState } from "react";
 import MenuMobileOptions from "./MenuMobileOptions";
 import MenuDesktopOptions from "./MenuDesktopOptions";
 import logoSportwear from "../../assets/LogoSportwear.svg";
-import { ShoppingCart } from "../shoppingCart/ShoppingCart";
 import {MdMenu, MdClose, MdOutlineShoppingCart, MdOutlineSearch, MdLogin,} from "react-icons/md";
 
 
@@ -11,8 +10,6 @@ export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const openClose = () => setIsOpen(!isOpen);
 
-  const [isOpenCart, setIsOpenCart] = useState(false);
-  const openCloseCart = () => setIsOpenCart(!isOpenCart);
 
   const nameButtons = {
     button1: "INICIO",
@@ -45,22 +42,6 @@ export const NavBar = () => {
         {/* BOTON DE CARRITO, USER, SEARCH */}
         <div className="flex items-center justify-center h-full md:h-[100%] mx-4 md:absolute flex-rows">
           <MdOutlineSearch size={24} color={"var(--clr-primary)"} />
-
-          <div className="cursor-pointer " onClick={openCloseCart} >
-            {isOpenCart ? (
-              <MdClose size={24} color={"var(--clr-primary)"} />
-            ) : (
-              <MdOutlineShoppingCart size={24} color={"var(--clr-primary)"} />
-            )}
-          </div>
-          <ShoppingCart
-            transitionCartItem={
-              isOpenCart
-                ? "translate-y-0 opacity-100"
-                : "translate-y-full opacity-0"
-            }
-          />
-
           <MdLogin size={24} color={"var(--clr-primary)"} />
         </div>
 

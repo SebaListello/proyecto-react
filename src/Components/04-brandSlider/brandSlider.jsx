@@ -8,7 +8,6 @@ export const BrandSlider = () => {
   const url = "http://localhost:8080/brandslider";
   const { data, isLoading } = useFetch(url);
 
-  console.log(data)
   if(isLoading){
     return ( 
     <Spinner />

@@ -1,10 +1,11 @@
 import Slider from 'react-slick';
+import { ProductCard } from '../productCard/ProductCard'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './productslider.css'
-import { ProductCard } from '../productCard/ProductCard'
 
-export const SliderL = ({data}) => {
+
+export const SliderL = ({data, onAdd, onRemove}) => {
 
   const settings = {
         dots: true,
@@ -41,12 +42,17 @@ export const SliderL = ({data}) => {
   };
 
   return (
-
+    <>
         <Slider {...settings}>
-          {data?.map(({id, imagen, nombre, icono, precio, descripcion}) => (
-                <ProductCard key={id} id={id} imagen={imagen} nombre={nombre} icono={icono} precio={precio} descripcion={descripcion}/>
+          {data?.map((product) => (
+                <ProductCard 
+                  key={product.id} 
+                  product={product}
+                  onAdd={onAdd}
+                  />
               ))}  
         </Slider>
+    </>
         
   );
 }
