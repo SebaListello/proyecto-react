@@ -2,7 +2,7 @@ import { useState } from "react";
 import MenuMobileOptions from "./MenuMobileOptions";
 import MenuDesktopOptions from "./MenuDesktopOptions";
 import logoSportwear from "../../assets/LogoSportwear.svg";
-import {MdMenu, MdClose, MdOutlineShoppingCart, MdOutlineSearch, MdLogin,} from "react-icons/md";
+import {MdMenu, MdClose, MdOutlineSearch, MdLogin,} from "react-icons/md";
 
 
 export const NavBar = () => {

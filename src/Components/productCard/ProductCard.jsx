@@ -5,7 +5,7 @@ export const ProductCard = ({product, onAdd}) => {
   const {id, imagen, icono, precio, nombre, descripcion} = product
   return (
     <div key={id} className="products__container-card flex flex-col md:items-center mx-auto h-[350px] bg-white border p-4 relative">
-        <div className="products__container-card_img grid place-items-center">
+        <div className="grid products__container-card_img place-items-center">
             <img className="max-w-[146px]" src={imagen} alt="nombre"  />
         </div>
 
@@ -20,9 +20,7 @@ export const ProductCard = ({product, onAdd}) => {
         </div>
 
         <button onClick={()=> onAdd(product)} 
-          className=" absolute top-0 right-0 p-2 bg-black text-white text-sm 
-          active:bg-white 
-          ">
+          className="absolute top-0 right-0 p-2 text-sm text-white bg-black  active:bg-white">
           <MdOutlineShoppingCart size={24} color={"var(--clr-primary)"} />
         </button>
     </div>

@@ -97,7 +97,7 @@ export const ProductSlider = () => {
       </div>
 
       {/* SHOPPING CART */}
-      <div className="cursor-pointer absolute top-[4.4%] right-[65px] z-50" onClick={openCloseCart} >
+      <div className="cursor-pointer fixed top-[32px] right-[65px] z-50" onClick={openCloseCart} >
             {isOpenCart ? (
               <MdClose size={24} color={"var(--clr-primary)"} />
             ) : (
